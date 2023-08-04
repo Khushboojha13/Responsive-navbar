@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .main {
+            background-color: rgb(255, 123, 0);
+            width: 100%;
+            height: 100vh;
+        }
+
+        img {
+            width: 20%;
+            min-height: 20vh;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="img">
+            <img src="icons8-menu-50.png" alt="icons8-macos-close-30.png">
+        </div>
+        <button onclick="navi()">CLICK HERE</button>
+        <p></p>
+    </div>
+
+    <script>
+
+        function navi() {
+            let img = document.querySelector("img");
+      //  img.addEventListener("click", navi);
+               let mysrc= img.getAttribute("src");
+               console.log(mysrc);
+
+              console.log( img.src="icons8-macos-close-30.png");
+
+            if (img.src == "icons8-menu-50.png") {
+
+                img.src="icons8-macos-close-30.png";
+              
+            }
+           /* else {
+                img.src="icons8-menu-50.png";
+            } */
+
+           /* if(img.src="icons8-macos-close-30.png"){
+                img.src="icons8-menu-50.png";
+            } */
+             
+            let btn= document.querySelector("p");
+            btn.innerHTML="jjj";   
+        }   
+
+
+    </script>
+</body>
+
+</html>

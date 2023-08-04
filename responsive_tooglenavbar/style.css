@@ -1,0 +1,131 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+   overflow: hidden; 
+}
+.main{
+    width:100%;
+    min-height:100vh;
+    overflow:hidden; 
+}
+header{
+  display:flex;
+  width:100%;
+  min-height:7vh;
+  justify-content:space-between;
+    align-items: center;
+    background-color: rgb(95, 108, 160);
+    padding-inline: 2.5vw;
+}
+nav{
+  
+    min-height:7vh;
+    justify-content:center;
+    display:flex;
+    align-items: center;
+    padding-inline: 2.5vw;
+}
+nav h1{
+    font-size: 2vmax;
+    color:white;
+    font-weight: 600;
+}
+nav li a{
+    font-size: 1.3vw;
+    font-weight: 600;
+    color:aliceblue;
+    text-decoration: none;
+}
+
+
+li{
+    list-style: none;
+}
+ul{
+    display:flex;
+    gap:4vw;
+    justify-content: space-between;
+    align-items: center;
+}
+  section{
+    width:100%;
+    min-height:87vh;
+    background-color: rgb(216, 87, 22);
+  }
+  footer{
+    width:100%;
+    min-height:7vh;
+    background-color: aquamarine;
+  }
+    .img{
+    width:2%;
+    min-height:1vh;
+    display:none;
+
+  }
+  @media(max-width:600px){
+    .img{
+      
+        display:block;
+        width:2%;
+        min-height:1vh;
+       padding-inline: 12vw; 
+       z-index:999;  /*yaha hamne isko z-index diya hai taki ye mobile view me dekhe nahi to navbar 100%width le raha hai and isko cover kar le rahah hai*/
+               }
+    
+    
+    nav{
+      width:100%;
+      min-height: 94vh;
+      position:absolute;
+      background-color: aliceblue;
+      top:0;  /*top 0 left 0 islye diya hai b/c ye spacing le raha tha*/
+      left:0;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    
+     transform: translateY(0);
+     /* transition: all 0.5s linear;   */
+
+      opacity:0;
+      visibility: hidden;
+      pointer-events: none;  
+
+    }
+
+
+    header{
+      position:relative;   /*yaha hamne iski position relative kardi hai b/c hame nav ko ispe float karana hai*/
+    }
+
+    nav li a{
+         display:block;
+         color:black;
+         font-size: 4.5vw;
+    }
+    ul{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap:5vh;
+     
+    }
+    .active nav{
+     transition: all 0.6s linear; 
+      transform: translateX(0);
+      opacity:1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+
+
+  /*Note jab ham transition use karte hai to display: none propety nahi laga sakte lagayenge to transition kam nahi karega - to ham yaha nav ko display:none nahi kar sakte mobile view me */
+
+
+  }
